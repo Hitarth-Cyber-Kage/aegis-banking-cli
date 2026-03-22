@@ -1,26 +1,35 @@
-# main.py
-# ---------- Program Begins ----------
+from login import login
+from register import register
+
+def main():
+    while True:
+        print("=== AEGIS Banking CLI ===")
+        print("1) Login")
+        print("2) Register")
+        print("3) Exit")
+
+        choice = input("\nEnter choice: ").strip()
+
+        if choice == "1":
+            user = login()
+            if user:
+                dashboard(user)
+
+        elif choice == "2":
+            register()
+
+        elif choice == "3":
+            print("\nExiting AEGIS...\n")
+            break
+
+        else:
+            print("\nInvalid option.\n")
 
 
-print("AEGIS Banking CLI")
+def dashboard(username):
+    print(f"\nWelcome, {username}!")
+    print("Dashboard coming soon...\n")
 
-print("\nMenu")
-print("1) Login")
-print("2) Register")
-print("3) Exit")
 
-choice = input("\nEnter your choice (1-3): ")
-
-if choice == "1":
-    print("\nLogin system coming soon")
-
-elif choice == "2":
-    print("\nRegistration system coming soon")
-
-elif choice == "3":
-    print("\nExiting AEGIS...")
-
-else:
-    print("\nInvalid option. Please try again.")
-
-# ---------- Program Ends ----------
+if __name__ == "__main__":
+    main()
