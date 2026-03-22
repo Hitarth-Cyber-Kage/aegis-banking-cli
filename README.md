@@ -14,7 +14,9 @@ This project is currently under active development.
 ## Current Features
 
 * Basic CLI menu system
-* User choice handling (Login / Register / Exit)
+* User registration system
+* User login system
+* Modular file structure (main, login, register, database)
 
 ---
 
